@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Задачи - Служба технической поддержки</title>
+    <meta name="description" content="Redmine" />
+    <meta name="keywords" content="issue,bug,tracker" />
+    <meta content="authenticity_token" name="csrf-param" />
+    <meta content="o7+/cpnNc5cEOkp2DW8+fA+yByjQU/uMa+ZwCFOMaI4=" name="csrf-token" />
+    <link rel='shortcut icon' href='favicon.ico?1396112202' />
+    <link href="stylesheets/jquery/jquery-ui-1.9.2.css?1396112202" media="all" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/application.css?1477919306" media="all" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/main.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/materialize.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="javascripts/jquery-1.8.3-ui-1.9.2-ujs-2.0.3.js?1396112202" type="text/javascript"></script>
+    <script src="javascripts/application.js?1396112202" type="text/javascript"></script>
+    <script src="javascripts/materialize.min.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script type="text/javascript">
+        //<![CDATA[
+        $(window).load(function () { warnLeavingUnsaved('Текущая страница содержит несохранённый текст, который будет потерян, если вы покинете эту страницу.'); });
+              //]]>
+    </script>
+    <script src="javascripts/theme.js?1388396763" type="text/javascript"></script>
+
+    <!-- page specific tags -->
+    <script src="javascripts/datepicker.js?1396112202" type="text/javascript"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+        var datepickerOptions = { dateFormat: 'yy-mm-dd', firstDay: 1, showOn: 'button', buttonImageOnly: true, buttonImage: 'images/calendar.png?1396112202', showButtonPanel: true, showWeek: true, showOtherMonths: true, selectOtherMonths: true, changeMonth: true, changeYear: true, beforeShow: beforeShowDatePicker };
+              //]]>
+    </script>
+    <script src="javascripts/i18n/jquery.ui.datepicker-ru.js?1396112202" type="text/javascript"></script>
+    <script src="javascripts/select_list_move.js?1396112202" type="text/javascript"></script>
+    <link href="http://epd47.ruissues.atom?key=9790935983c864f812e329b67f66d61201e76ab2" rel="alternate" title="Задачи" type="application/atom+xml"
+    />
+    <link href="http://epd47.ruissues/changes.atom?key=9790935983c864f812e329b67f66d61201e76ab2" rel="alternate" title="Подробности по всем изменениям"
+        type="application/atom+xml" />
+    <script src="javascripts/context_menu.js?1396112202" type="text/javascript"></script>
+    <link href="stylesheets/context_menu.css?1396112202" media="screen" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="layout-light">
+    <!-- Start Page Loading -->
+    <!-- <div id="loader-wrapper">
+    </div> -->
+    <!-- End Page Loading -->
+
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+    <!-- START HEADER -->
+    <header id="header" class="page-topbar">
+        <div class="navbar-fixed ">
+            <nav class="navbar-color ">
+                <div class="nav-wrapper gradient-45deg-light-blue-cyan  white-text">
+                    <!--  RIGHT -->
+                    <div class=" center header-search-wrapper hide-on-med-and-down sideNav-lock">
+                        <i class="material-icons">search</i>
+                        <input name="Search" class="header-search-input z-depth-2" placeholder="Поиск... " type="text">
+                    </div>
+
+                    <ul class="right">
+                        <li>
+                            <a href="users/5" class="user active tab">v.bakharev</a>
+                        </li>
+                        <li>
+                            <a href="my/account" class="my-account">Моя учётная запись</a>
+                        </li>
+                        <li>
+                            <a href="logout" class="logout" data-method="post" rel="nofollow">Выйти</a>
+                        </li>
+                    </ul>
+                    <ul class="left">
+                        <li>
+                            <a href="" class="home waves-effect waves-light btn gradient-45deg-light-blue-cyan box-shadow "> Домашняя страница</a>
+                        </li>
+                        <li>
+                            <a href="my/page" class="my-page waves-effect waves-light btn gradient-45deg-light-blue-cyan box-shadow ">Моя страница</a>
+                        </li>
+                        <li>
+                            <a href="projects" class="projects waves-effect waves-light btn gradient-45deg-light-blue-cyan box-shadow">Проекты</a>
+                        </li>
+                    </ul>
+
+
+                    <span class="right" id="loggedas">Вы вошли как
+                    </span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- END HEADER -->
+
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+    <!-- START MAIN -->
+    <div id="main">
+        <!-- START WRAPPER -->
+        <div class="wrapper">
+
+            <!-- START LEFT SIDEBAR NAV-->
+            <aside id="left-sidebar-nav" class="nav-expanded nav-lock nav-collapsible">
+            </aside>
+            <!-- END LEFT SIDEBAR NAV-->
+
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+            <!-- START CONTENT -->
+            <section id="content">
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <h5 class="breadcrumbs-title">Cards</h5>
+
+
+                        <form accept-charset="UTF-8" action="issues" method="post">
+                            <div style="margin:0;padding:0;display:inline">
+                                <input name="utf8" type="hidden" value="&#x2713;" />
+                                <input name="authenticity_token" type="hidden" value="o7+/cpnNc5cEOkp2DW8+fA+yByjQU/uMa+ZwCFOMaI4=" />
+                            </div>
+                            <input name="back_url" type="hidden" value="issues?assigned_to_id=me&amp;set_filter=1&amp;sort=priority%3Adesc%2Cupdated_on%3Adesc"
+                            />
+                            <div class="autoscroll">
+                                <table class="list issues striped">
+                                    <thead>
+                                        <tr>
+                                            <th class="checkbox hide-when-print">
+                                                <a href="issues" onclick="toggleIssuesSelection(this); return false;" title="Отметить все/Очистить">
+                                                    <img alt="Toggle_check" src="images/toggle_check.png?1396112202" />
+                                                </a>
+                                            </th>
+                                            <th title="Сортировать по '#'">
+                                                <a href="issues?assigned_to_id=me&amp;set_filter=1&amp;sort=id%3Adesc%2Cpriority%3Adesc%2Cupdated_on%3Adesc">#</a>
+                                            </th>
+                                            <th title="Сортировать по 'Проект'">
+                                                <a href="issues?assigned_to_id=me&amp;set_filter=1&amp;sort=project%2Cpriority%3Adesc%2Cupdated_on%3Adesc">Проект</a>
+                                            </th>
+                                            <th title="Сортировать по 'Готовность'">
+                                                <a href="issues?assigned_to_id=me&amp;set_filter=1&amp;sort=done_ratio%2Cpriority%3Adesc%2Cupdated_on%3Adesc">Готовность</a>
+                                            </th>
+                                            <th title="Сортировать по 'Тема'">
+                                                <a href="issues?assigned_to_id=me&amp;set_filter=1&amp;sort=subject%2Cpriority%3Adesc%2Cupdated_on%3Adesc">Тема</a>
+                                            </th>
+                                            <th title="Сортировать по 'Трекер'">
+                                                <a href="issues?assigned_to_id=me&amp;set_filter=1&amp;sort=tracker%2Cpriority%3Adesc%2Cupdated_on%3Adesc">Трекер</a>
+                                            </th>
+                                            <th title="Сортировать по 'Статус'">
+                                                <a href="issues?assigned_to_id=me&amp;set_filter=1&amp;sort=status%2Cpriority%3Adesc%2Cupdated_on%3Adesc">Статус</a>
+                                            </th>
+                                            <th title="Сортировать по 'Приоритет'">
+                                                <a href="issues?assigned_to_id=me&amp;set_filter=1&amp;sort=priority%2Cupdated_on%3Adesc" class="sort desc">Приоритет</a>
+                                            </th>
+                                            <th title="Сортировать по 'Назначена'">
+                                                <a href="issues?assigned_to_id=me&amp;set_filter=1&amp;sort=assigned_to%2Cpriority%3Adesc%2Cupdated_on%3Adesc">Назначена</a>
+                                            </th>
+                                            <th title="Сортировать по 'Обновлено'">
+                                                <a href="issues?assigned_to_id=me&amp;set_filter=1&amp;sort=updated_on%3Adesc%2Cpriority%3Adesc">Обновлено</a>
+                                            </th>
+                                            <th title="Сортировать по 'Автор'">
+                                                <a href="issues?assigned_to_id=me&amp;set_filter=1&amp;sort=author%2Cpriority%3Adesc%2Cupdated_on%3Adesc">Автор</a>
+                                            </th>
+                                            <th title="Сортировать по 'Дата выполнения'">
+                                                <a href="issues?assigned_to_id=me&amp;set_filter=1&amp;sort=due_date%2Cpriority%3Adesc%2Cupdated_on%3Adesc">Дата выполнения</a>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr id="issue-11855" class="hascontextmenu odd issue tracker-6 status-1 priority-5 priority-highest assigned-to-me ">
+                                            <td class="checkbox hide-when-print">
+                                                <input name="ids[]" type="checkbox" value="11855" />
+                                            </td>
+                                            <td class="id">
+                                                <a href="issues/11855">11855</a>
+                                            </td>
+                                            <td class="project">
+                                                <a href="projects/lw">Поручения и распоряжения Генерального Директора</a>
+                                            </td>
+                                            <td class="done_ratio">
+                                                <table class="progress progress-0" style="width: 80px;">
+                                                    <tr>
+                                                        <td class="todo" style="width: 100%;"></td>
+                                                    </tr>
+                                                </table>
+                                                <p class="percent"></p>
+                                            </td>
+                                            <td class="subject">
+                                                <a href="issues/11855">Исполнение протокола совещания по вопросу организации ИТ-закупок</a>
+                                            </td>
+                                            <td class="tracker">Служебная записка</td>
+                                            <td class="status">Новая</td>
+                                            <td class="priority">Немедленный</td>
+                                            <td class="assigned_to">
+                                                <a href="users/5" class="user active">Бахарев Виктор</a>
+                                            </td>
+                                            <td class="updated_on">09.02.2018 14:51</td>
+                                            <td class="author">
+                                                <a href="users/180" class="user active">Хренкова Анастасия</a>
+                                            </td>
+                                            <td class="due_date"></td>
+                                        </tr>
+                                        <tr id="issue-15639" class="hascontextmenu even issue tracker-9 status-1 priority-3 priority-high3 overdue child assigned-to-me ">
+                                            <td class="checkbox hide-when-print">
+                                                <input name="ids[]" type="checkbox" value="15639" />
+                                            </td>
+                                            <td class="id">
+                                                <a href="issues/15639">15639</a>
+                                            </td>
+                                            <td class="project">
+                                                <a href="projects/kofhp">Согласование договоров</a>
+                                            </td>
+                                            <td class="done_ratio">
+                                                <table class="progress progress-0" style="width: 80px;">
+                                                    <tr>
+                                                        <td class="todo" style="width: 100%;"></td>
+                                                    </tr>
+                                                </table>
+                                                <p class="percent"></p>
+                                            </td>
+                                            <td class="subject">
+                                                <a href="issues/15639">доп.соглашение</a>
+                                            </td>
+                                            <td class="tracker">Согласование</td>
+                                            <td class="status">Новая</td>
+                                            <td class="priority">Высокий</td>
+                                            <td class="assigned_to">
+                                                <a href="users/5" class="user active">Бахарев Виктор</a>
+                                            </td>
+                                            <td class="updated_on">03.05.2018 17:18</td>
+                                            <td class="author">
+                                                <a href="users/78" class="user active">Баранова Ольга</a>
+                                            </td>
+                                            <td class="due_date">
+                                                <span class="overdue1">2018-04-25</span>
+                                            </td>
+                                        </tr>
+                                        <tr id="issue-15785" class="hascontextmenu odd issue tracker-9 status-1 priority-3 priority-high3 overdue child assigned-to-me ">
+                                            <td class="checkbox hide-when-print">
+                                                <input name="ids[]" type="checkbox" value="15785" />
+                                            </td>
+                                            <td class="id">
+                                                <a href="issues/15785">15785</a>
+                                            </td>
+                                            <td class="project">
+                                                <a href="projects/kofhp">Согласование договоров</a>
+                                            </td>
+                                            <td class="done_ratio">
+                                                <table class="progress progress-0" style="width: 80px;">
+                                                    <tr>
+                                                        <td class="todo" style="width: 100%;"></td>
+                                                    </tr>
+                                                </table>
+                                                <p class="percent"></p>
+                                            </td>
+                                            <td class="subject">
+                                                <a href="issues/15785">Прошу ознакомиться с документами и дать свои комментарии.</a>
+                                            </td>
+                                            <td class="tracker">Согласование</td>
+                                            <td class="status">Новая</td>
+                                            <td class="priority">Высокий</td>
+                                            <td class="assigned_to">
+                                                <a href="users/5" class="user active">Бахарев Виктор</a>
+                                            </td>
+                                            <td class="updated_on">26.04.2018 16:14</td>
+                                            <td class="author">
+                                                <a href="users/357" class="user active">Ратман Наталия</a>
+                                            </td>
+                                            <td class="due_date">
+                                                <span class="overdue1">2018-05-04</span>
+                                            </td>
+                                        </tr>
+                                        <tr id="issue-11119" class="hascontextmenu even issue tracker-6 status-2 priority-3 priority-high3 overdue assigned-to-me ">
+                                            <td class="checkbox hide-when-print">
+                                                <input name="ids[]" type="checkbox" value="11119" />
+                                            </td>
+                                            <td class="id">
+                                                <a href="issues/11119">11119</a>
+                                            </td>
+                                            <td class="project">
+                                                <a href="projects/lw">Поручения и распоряжения Генерального Директора</a>
+                                            </td>
+                                            <td class="done_ratio">
+                                                <table class="progress progress-0" style="width: 80px;">
+                                                    <tr>
+                                                        <td class="todo" style="width: 100%;"></td>
+                                                    </tr>
+                                                </table>
+                                                <p class="percent"></p>
+                                            </td>
+                                            <td class="subject">
+                                                <a href="issues/11119">1/01 АИС'Паспортный стол' техн решения</a>
+                                            </td>
+                                            <td class="tracker">Служебная записка</td>
+                                            <td class="status">В работе</td>
+                                            <td class="priority">Высокий</td>
+                                            <td class="assigned_to">
+                                                <a href="users/5" class="user active">Бахарев Виктор</a>
+                                            </td>
+                                            <td class="updated_on">12.02.2018 09:55</td>
+                                            <td class="author">
+                                                <a href="users/41" class="user active">Решина Анастасия</a>
+                                            </td>
+                                            <td class="due_date">
+                                                <span class="overdue1">2018-02-28</span>
+                                            </td>
+                                        </tr>
+                                        <tr id="issue-15911" class="hascontextmenu odd issue tracker-9 status-1 priority-2 priority-default parent created-by-me assigned-to-me ">
+                                            <td class="checkbox hide-when-print">
+                                                <input name="ids[]" type="checkbox" value="15911" />
+                                            </td>
+                                            <td class="id">
+                                                <a href="issues/15911">15911</a>
+                                            </td>
+                                            <td class="project">
+                                                <a href="projects/kofhp">Согласование договоров</a>
+                                            </td>
+                                            <td class="done_ratio">
+                                                <table class="progress progress-60" style="width: 80px;">
+                                                    <tr>
+                                                        <td class="closed" style="width: 60%;"></td>
+                                                        <td class="todo" style="width: 40%;"></td>
+                                                    </tr>
+                                                </table>
+                                                <p class="percent"></p>
+                                            </td>
+                                            <td class="subject">
+                                                <a href="issues/15911">Аренда серверов в МИРАНе</a>
+                                            </td>
+                                            <td class="tracker">Согласование</td>
+                                            <td class="status">Новая</td>
+                                            <td class="priority">Нормальный</td>
+                                            <td class="assigned_to">
+                                                <a href="users/5" class="user active">Бахарев Виктор</a>
+                                            </td>
+                                            <td class="updated_on">04.05.2018 17:40</td>
+                                            <td class="author">
+                                                <a href="users/5" class="user active">Бахарев Виктор</a>
+                                            </td>
+                                            <td class="due_date"></td>
+                                        </tr>
+                                        <tr id="issue-14407" class="hascontextmenu even issue tracker-6 status-2 priority-2 priority-default assigned-to-me ">
+                                            <td class="checkbox hide-when-print">
+                                                <input name="ids[]" type="checkbox" value="14407" />
+                                            </td>
+                                            <td class="id">
+                                                <a href="issues/14407">14407</a>
+                                            </td>
+                                            <td class="project">
+                                                <a href="projects/lw">Поручения и распоряжения Генерального Директора</a>
+                                            </td>
+                                            <td class="done_ratio">
+                                                <table class="progress progress-0" style="width: 80px;">
+                                                    <tr>
+                                                        <td class="todo" style="width: 100%;"></td>
+                                                    </tr>
+                                                </table>
+                                                <p class="percent"></p>
+                                            </td>
+                                            <td class="subject">
+                                                <a href="issues/14407">Ядра сети 149</a>
+                                            </td>
+                                            <td class="tracker">Служебная записка</td>
+                                            <td class="status">В работе</td>
+                                            <td class="priority">Нормальный</td>
+                                            <td class="assigned_to">
+                                                <a href="users/5" class="user active">Бахарев Виктор</a>
+                                            </td>
+                                            <td class="updated_on">04.05.2018 17:32</td>
+                                            <td class="author">
+                                                <a href="users/41" class="user active">Решина Анастасия</a>
+                                            </td>
+                                            <td class="due_date">
+                                                <a href="issues/14407">2018-05-08</a>
+                                            </td>
+                                        </tr>
+                                        <tr id="issue-15313" class="hascontextmenu odd issue tracker-3 status-1 priority-2 priority-default overdue assigned-to-me ">
+                                            <td class="checkbox hide-when-print">
+                                                <input name="ids[]" type="checkbox" value="15313" />
+                                            </td>
+                                            <td class="id">
+                                                <a href="issues/15313">15313</a>
+                                            </td>
+                                            <td class="project">
+                                                <a href="projects/sosnovy">Сосновоборский ГО</a>
+                                            </td>
+                                            <td class="done_ratio">
+                                                <table class="progress progress-0" style="width: 80px;">
+                                                    <tr>
+                                                        <td class="todo" style="width: 100%;"></td>
+                                                    </tr>
+                                                </table>
+                                                <p class="percent"></p>
+                                            </td>
+                                            <td class="subject">
+                                                <a href="issues/15313">Вопрос с сайта</a>
+                                            </td>
+                                            <td class="tracker">Поддержка</td>
+                                            <td class="status">Новая</td>
+                                            <td class="priority">Нормальный</td>
+                                            <td class="assigned_to">
+                                                <a href="users/5" class="user active">Бахарев Виктор</a>
+                                            </td>
+                                            <td class="updated_on">04.05.2018 11:10</td>
+                                            <td class="author">
+                                                <a href="users/1" class="user active">ТП Администратор</a>
+                                            </td>
+                                            <td class="due_date">
+                                                <span class="overdue1">2018-05-01</span>
+                                            </td>
+                                        </tr>
+                                        <tr id="issue-15375" class="hascontextmenu even issue tracker-1 status-2 priority-2 priority-default assigned-to-me ">
+                                            <td class="checkbox hide-when-print">
+                                                <input name="ids[]" type="checkbox" value="15375" />
+                                            </td>
+                                            <td class="id">
+                                                <a href="issues/15375">15375</a>
+                                            </td>
+                                            <td class="project">
+                                                <a href="projects/lomo_hd">Сопровождение Ломоносовского ТУ</a>
+                                            </td>
+                                            <td class="done_ratio">
+                                                <table class="progress progress-0" style="width: 80px;">
+                                                    <tr>
+                                                        <td class="todo" style="width: 100%;"></td>
+                                                    </tr>
+                                                </table>
+                                                <p class="percent"></p>
+                                            </td>
+                                            <td class="subject">
+                                                <a href="issues/15375">представление показаний ИПУ по тел. 630-19-88</a>
+                                            </td>
+                                            <td class="tracker">Ошибка</td>
+                                            <td class="status">В работе</td>
+                                            <td class="priority">Нормальный</td>
+                                            <td class="assigned_to">
+                                                <a href="users/5" class="user active">Бахарев Виктор</a>
+                                            </td>
+                                            <td class="updated_on">03.05.2018 19:46</td>
+                                            <td class="author">
+                                                <a href="users/6" class="user active">Портнова Ольга</a>
+                                            </td>
+                                            <td class="due_date"></td>
+                                        </tr>
+                                        <tr id="issue-15914" class="hascontextmenu odd issue tracker-9 status-1 priority-2 priority-default child created-by-me assigned-to-me ">
+                                            <td class="checkbox hide-when-print">
+                                                <input name="ids[]" type="checkbox" value="15914" />
+                                            </td>
+                                            <td class="id">
+                                                <a href="issues/15914">15914</a>
+                                            </td>
+                                            <td class="project">
+                                                <a href="projects/kofhp">Согласование договоров</a>
+                                            </td>
+                                            <td class="done_ratio">
+                                                <table class="progress progress-0" style="width: 80px;">
+                                                    <tr>
+                                                        <td class="todo" style="width: 100%;"></td>
+                                                    </tr>
+                                                </table>
+                                                <p class="percent"></p>
+                                            </td>
+                                            <td class="subject">
+                                                <a href="issues/15914">Аренда серверов в МИРАНе</a>
+                                            </td>
+                                            <td class="tracker">Согласование</td>
+                                            <td class="status">Новая</td>
+                                            <td class="priority">Нормальный</td>
+                                            <td class="assigned_to">
+                                                <a href="users/5" class="user active">Бахарев Виктор</a>
+                                            </td>
+                                            <td class="updated_on">28.04.2018 16:14</td>
+                                            <td class="author">
+                                                <a href="users/5" class="user active">Бахарев Виктор</a>
+                                            </td>
+                                            <td class="due_date"></td>
+                                        </tr>
+                                        <tr id="issue-14805" class="hascontextmenu even issue tracker-6 status-2 priority-2 priority-default overdue child assigned-to-me ">
+                                            <td class="checkbox hide-when-print">
+                                                <input name="ids[]" type="checkbox" value="14805" />
+                                            </td>
+                                            <td class="id">
+                                                <a href="issues/14805">14805</a>
+                                            </td>
+                                            <td class="project">
+                                                <a href="projects/lw">Поручения и распоряжения Генерального Директора</a>
+                                            </td>
+                                            <td class="done_ratio">
+                                                <table class="progress progress-0" style="width: 80px;">
+                                                    <tr>
+                                                        <td class="todo" style="width: 100%;"></td>
+                                                    </tr>
+                                                </table>
+                                                <p class="percent"></p>
+                                            </td>
+                                            <td class="subject">
+                                                <a href="issues/14805">Заключение договоров Всеволожск, ошибочные платежи</a>
+                                            </td>
+                                            <td class="tracker">Служебная записка</td>
+                                            <td class="status">В работе</td>
+                                            <td class="priority">Нормальный</td>
+                                            <td class="assigned_to">
+                                                <a href="users/5" class="user active">Бахарев Виктор</a>
+                                            </td>
+                                            <td class="updated_on">17.04.2018 08:07</td>
+                                            <td class="author">
+                                                <a href="users/44" class="user active">Афанасьев Сергей</a>
+                                            </td>
+                                            <td class="due_date">
+                                                <span class="overdue1">2018-04-27</span>
+                                            </td>
+                                        </tr>
+                                        <tr id="issue-9451" class="hascontextmenu odd issue tracker-6 status-1 priority-2 priority-default overdue assigned-to-me ">
+                                            <td class="checkbox hide-when-print">
+                                                <input name="ids[]" type="checkbox" value="9451" />
+                                            </td>
+                                            <td class="id">
+                                                <a href="issues/9451">9451</a>
+                                            </td>
+                                            <td class="project">
+                                                <a href="projects/lw">Поручения и распоряжения Генерального Директора</a>
+                                            </td>
+                                            <td class="done_ratio">
+                                                <table class="progress progress-0" style="width: 80px;">
+                                                    <tr>
+                                                        <td class="todo" style="width: 100%;"></td>
+                                                    </tr>
+                                                </table>
+                                                <p class="percent"></p>
+                                            </td>
+                                            <td class="subject">
+                                                <a href="issues/9451">Кириши 1039</a>
+                                            </td>
+                                            <td class="tracker">Служебная записка</td>
+                                            <td class="status">Новая</td>
+                                            <td class="priority">Нормальный</td>
+                                            <td class="assigned_to">
+                                                <a href="users/5" class="user active">Бахарев Виктор</a>
+                                            </td>
+                                            <td class="updated_on">11.04.2018 11:41</td>
+                                            <td class="author">
+                                                <a href="users/41" class="user active">Решина Анастасия</a>
+                                            </td>
+                                            <td class="due_date">
+                                                <span class="overdue1">2017-11-20</span>
+                                            </td>
+                                        </tr>
+                                        <tr id="issue-14943" class="hascontextmenu even issue tracker-4 status-1 priority-2 priority-default overdue assigned-to-me ">
+                                            <td class="checkbox hide-when-print">
+                                                <input name="ids[]" type="checkbox" value="14943" />
+                                            </td>
+                                            <td class="id">
+                                                <a href="issues/14943">14943</a>
+                                            </td>
+                                            <td class="project">
+                                                <a href="projects/lw">Поручения и распоряжения Генерального Директора</a>
+                                            </td>
+                                            <td class="done_ratio">
+                                                <table class="progress progress-0" style="width: 80px;">
+                                                    <tr>
+                                                        <td class="todo" style="width: 100%;"></td>
+                                                    </tr>
+                                                </table>
+                                                <p class="percent"></p>
+                                            </td>
+                                            <td class="subject">
+                                                <a href="issues/14943">Жилищное хозяйство 574</a>
+                                            </td>
+                                            <td class="tracker">Входящие</td>
+                                            <td class="status">Новая</td>
+                                            <td class="priority">Нормальный</td>
+                                            <td class="assigned_to">
+                                                <a href="users/5" class="user active">Бахарев Виктор</a>
+                                            </td>
+                                            <td class="updated_on">10.04.2018 15:33</td>
+                                            <td class="author">
+                                                <a href="users/41" class="user active">Решина Анастасия</a>
+                                            </td>
+                                            <td class="due_date">
+                                                <span class="overdue1">2018-04-13</span>
+                                            </td>
+                                        </tr>
+                                        <tr id="issue-14794" class="hascontextmenu odd issue tracker-6 status-1 priority-2 priority-default overdue child assigned-to-me ">
+                                            <td class="checkbox hide-when-print">
+                                                <input name="ids[]" type="checkbox" value="14794" />
+                                            </td>
+                                            <td class="id">
+                                                <a href="issues/14794">14794</a>
+                                            </td>
+                                            <td class="project">
+                                                <a href="projects/lw">Поручения и распоряжения Генерального Директора</a>
+                                            </td>
+                                            <td class="done_ratio">
+                                                <table class="progress progress-0" style="width: 80px;">
+                                                    <tr>
+                                                        <td class="todo" style="width: 100%;"></td>
+                                                    </tr>
+                                                </table>
+                                                <p class="percent"></p>
+                                            </td>
+                                            <td class="subject">
+                                                <a href="issues/14794">Прошу принять меры по автоматизации расщепления платежей</a>
+                                            </td>
+                                            <td class="tracker">Служебная записка</td>
+                                            <td class="status">Новая</td>
+                                            <td class="priority">Нормальный</td>
+                                            <td class="assigned_to">
+                                                <a href="users/5" class="user active">Бахарев Виктор</a>
+                                            </td>
+                                            <td class="updated_on">06.04.2018 15:57</td>
+                                            <td class="author">
+                                                <a href="users/44" class="user active">Афанасьев Сергей</a>
+                                            </td>
+                                            <td class="due_date">
+                                                <span class="overdue1">2018-04-12</span>
+                                            </td>
+                                        </tr>
+                                        <tr id="issue-14804" class="hascontextmenu even issue tracker-6 status-1 priority-2 priority-default overdue child assigned-to-me ">
+                                            <td class="checkbox hide-when-print">
+                                                <input name="ids[]" type="checkbox" value="14804" />
+                                            </td>
+                                            <td class="id">
+                                                <a href="issues/14804">14804</a>
+                                            </td>
+                                            <td class="project">
+                                                <a href="projects/lw">Поручения и распоряжения Генерального Директора</a>
+                                            </td>
+                                            <td class="done_ratio">
+                                                <table class="progress progress-0" style="width: 80px;">
+                                                    <tr>
+                                                        <td class="todo" style="width: 100%;"></td>
+                                                    </tr>
+                                                </table>
+                                                <p class="percent"></p>
+                                            </td>
+                                            <td class="subject">
+                                                <a href="issues/14804">Прошу внести доработки в систему</a>
+                                            </td>
+                                            <td class="tracker">Служебная записка</td>
+                                            <td class="status">Новая</td>
+                                            <td class="priority">Нормальный</td>
+                                            <td class="assigned_to">
+                                                <a href="users/5" class="user active">Бахарев Виктор</a>
+                                            </td>
+                                            <td class="updated_on">06.04.2018 12:27</td>
+                                            <td class="author">
+                                                <a href="users/44" class="user active">Афанасьев Сергей</a>
+                                            </td>
+                                            <td class="due_date">
+                                                <span class="overdue1">2018-04-12</span>
+                                            </td>
+                                        </tr>
+                                        <tr id="issue-13641" class="hascontextmenu odd issue tracker-4 status-1 priority-2 priority-default overdue assigned-to-me ">
+                                            <td class="checkbox hide-when-print">
+                                                <input name="ids[]" type="checkbox" value="13641" />
+                                            </td>
+                                            <td class="id">
+                                                <a href="issues/13641">13641</a>
+                                            </td>
+                                            <td class="project">
+                                                <a href="projects/lw">Поручения и распоряжения Генерального Директора</a>
+                                            </td>
+                                            <td class="done_ratio">
+                                                <table class="progress progress-0" style="width: 80px;">
+                                                    <tr>
+                                                        <td class="todo" style="width: 100%;"></td>
+                                                    </tr>
+                                                </table>
+                                                <p class="percent"></p>
+                                            </td>
+                                            <td class="subject">
+                                                <a href="issues/13641">Минта 373</a>
+                                            </td>
+                                            <td class="tracker">Входящие</td>
+                                            <td class="status">Новая</td>
+                                            <td class="priority">Нормальный</td>
+                                            <td class="assigned_to">
+                                                <a href="users/5" class="user active">Бахарев Виктор</a>
+                                            </td>
+                                            <td class="updated_on">07.03.2018 10:21</td>
+                                            <td class="author">
+                                                <a href="users/41" class="user active">Решина Анастасия</a>
+                                            </td>
+                                            <td class="due_date">
+                                                <span class="overdue1">2018-03-14</span>
+                                            </td>
+                                        </tr>
+                                        <tr id="issue-12721" class="hascontextmenu even issue tracker-2 status-1 priority-2 priority-default overdue assigned-to-me ">
+                                            <td class="checkbox hide-when-print">
+                                                <input name="ids[]" type="checkbox" value="12721" />
+                                            </td>
+                                            <td class="id">
+                                                <a href="issues/12721">12721</a>
+                                            </td>
+                                            <td class="project">
+                                                <a href="projects/lw">Поручения и распоряжения Генерального Директора</a>
+                                            </td>
+                                            <td class="done_ratio">
+                                                <table class="progress progress-0" style="width: 80px;">
+                                                    <tr>
+                                                        <td class="todo" style="width: 100%;"></td>
+                                                    </tr>
+                                                </table>
+                                                <p class="percent"></p>
+                                            </td>
+                                            <td class="subject">
+                                                <a href="issues/12721">п.21 протокола еженедельного совещания</a>
+                                            </td>
+                                            <td class="tracker">Улучшение</td>
+                                            <td class="status">Новая</td>
+                                            <td class="priority">Нормальный</td>
+                                            <td class="assigned_to">
+                                                <a href="users/5" class="user active">Бахарев Виктор</a>
+                                            </td>
+                                            <td class="updated_on">12.02.2018 16:22</td>
+                                            <td class="author">
+                                                <a href="users/41" class="user active">Решина Анастасия</a>
+                                            </td>
+                                            <td class="due_date">
+                                                <span class="overdue1">2018-02-19</span>
+                                            </td>
+                                        </tr>
+                                        <tr id="issue-12720" class="hascontextmenu odd issue tracker-2 status-1 priority-2 priority-default overdue assigned-to-me ">
+                                            <td class="checkbox hide-when-print">
+                                                <input name="ids[]" type="checkbox" value="12720" />
+                                            </td>
+                                            <td class="id">
+                                                <a href="issues/12720">12720</a>
+                                            </td>
+                                            <td class="project">
+                                                <a href="projects/lw">Поручения и распоряжения Генерального Директора</a>
+                                            </td>
+                                            <td class="done_ratio">
+                                                <table class="progress progress-0" style="width: 80px;">
+                                                    <tr>
+                                                        <td class="todo" style="width: 100%;"></td>
+                                                    </tr>
+                                                </table>
+                                                <p class="percent"></p>
+                                            </td>
+                                            <td class="subject">
+                                                <a href="issues/12720">п.20 протокола еженедельного совещания</a>
+                                            </td>
+                                            <td class="tracker">Улучшение</td>
+                                            <td class="status">Новая</td>
+                                            <td class="priority">Нормальный</td>
+                                            <td class="assigned_to">
+                                                <a href="users/5" class="user active">Бахарев Виктор</a>
+                                            </td>
+                                            <td class="updated_on">12.02.2018 16:22</td>
+                                            <td class="author">
+                                                <a href="users/41" class="user active">Решина Анастасия</a>
+                                            </td>
+                                            <td class="due_date">
+                                                <span class="overdue1">2018-02-19</span>
+                                            </td>
+                                        </tr>
+                                        <tr id="issue-8581" class="hascontextmenu even issue tracker-6 status-1 priority-2 priority-default overdue assigned-to-me ">
+                                            <td class="checkbox hide-when-print">
+                                                <input name="ids[]" type="checkbox" value="8581" />
+                                            </td>
+                                            <td class="id">
+                                                <a href="issues/8581">8581</a>
+                                            </td>
+                                            <td class="project">
+                                                <a href="projects/lw">Поручения и распоряжения Генерального Директора</a>
+                                            </td>
+                                            <td class="done_ratio">
+                                                <table class="progress progress-0" style="width: 80px;">
+                                                    <tr>
+                                                        <td class="todo" style="width: 100%;"></td>
+                                                    </tr>
+                                                </table>
+                                                <p class="percent"></p>
+                                            </td>
+                                            <td class="subject">
+                                                <a href="issues/8581">О пополнении клиентской базы 989</a>
+                                            </td>
+                                            <td class="tracker">Служебная записка</td>
+                                            <td class="status">Новая</td>
+                                            <td class="priority">Нормальный</td>
+                                            <td class="assigned_to">
+                                                <a href="users/5" class="user active">Бахарев Виктор</a>
+                                            </td>
+                                            <td class="updated_on">19.01.2018 13:18</td>
+                                            <td class="author">
+                                                <a href="users/41" class="user active">Решина Анастасия</a>
+                                            </td>
+                                            <td class="due_date">
+                                                <span class="overdue1">2017-10-26</span>
+                                            </td>
+                                        </tr>
+                                        <tr id="issue-11266" class="hascontextmenu odd issue tracker-4 status-1 priority-2 priority-default assigned-to-me ">
+                                            <td class="checkbox hide-when-print">
+                                                <input name="ids[]" type="checkbox" value="11266" />
+                                            </td>
+                                            <td class="id">
+                                                <a href="issues/11266">11266</a>
+                                            </td>
+                                            <td class="project">
+                                                <a href="projects/lw">Поручения и распоряжения Генерального Директора</a>
+                                            </td>
+                                            <td class="done_ratio">
+                                                <table class="progress progress-0" style="width: 80px;">
+                                                    <tr>
+                                                        <td class="todo" style="width: 100%;"></td>
+                                                    </tr>
+                                                </table>
+                                                <p class="percent"></p>
+                                            </td>
+                                            <td class="subject">
+                                                <a href="issues/11266">22/01 Агентский договор № 30/11 от 01.04.2015</a>
+                                            </td>
+                                            <td class="tracker">Входящие</td>
+                                            <td class="status">Новая</td>
+                                            <td class="priority">Нормальный</td>
+                                            <td class="assigned_to">
+                                                <a href="users/5" class="user active">Бахарев Виктор</a>
+                                            </td>
+                                            <td class="updated_on">12.01.2018 11:59</td>
+                                            <td class="author">
+                                                <a href="users/41" class="user active">Решина Анастасия</a>
+                                            </td>
+                                            <td class="due_date"></td>
+                                        </tr>
+                                        <tr id="issue-10915" class="hascontextmenu even issue tracker-6 status-1 priority-2 priority-default overdue assigned-to-me ">
+                                            <td class="checkbox hide-when-print">
+                                                <input name="ids[]" type="checkbox" value="10915" />
+                                            </td>
+                                            <td class="id">
+                                                <a href="issues/10915">10915</a>
+                                            </td>
+                                            <td class="project">
+                                                <a href="projects/lw">Поручения и распоряжения Генерального Директора</a>
+                                            </td>
+                                            <td class="done_ratio">
+                                                <table class="progress progress-0" style="width: 80px;">
+                                                    <tr>
+                                                        <td class="todo" style="width: 100%;"></td>
+                                                    </tr>
+                                                </table>
+                                                <p class="percent"></p>
+                                            </td>
+                                            <td class="subject">
+                                                <a href="issues/10915">Закупки 1135</a>
+                                            </td>
+                                            <td class="tracker">Служебная записка</td>
+                                            <td class="status">Новая</td>
+                                            <td class="priority">Нормальный</td>
+                                            <td class="assigned_to">
+                                                <a href="users/5" class="user active">Бахарев Виктор</a>
+                                            </td>
+                                            <td class="updated_on">26.12.2017 14:29</td>
+                                            <td class="author">
+                                                <a href="users/41" class="user active">Решина Анастасия</a>
+                                            </td>
+                                            <td class="due_date">
+                                                <span class="overdue1">2018-01-11</span>
+                                            </td>
+                                        </tr>
+                                        <tr id="issue-8859" class="hascontextmenu odd issue tracker-6 status-4 priority-2 priority-default overdue assigned-to-me ">
+                                            <td class="checkbox hide-when-print">
+                                                <input name="ids[]" type="checkbox" value="8859" />
+                                            </td>
+                                            <td class="id">
+                                                <a href="issues/8859">8859</a>
+                                            </td>
+                                            <td class="project">
+                                                <a href="projects/lw">Поручения и распоряжения Генерального Директора</a>
+                                            </td>
+                                            <td class="done_ratio">
+                                                <table class="progress progress-0" style="width: 80px;">
+                                                    <tr>
+                                                        <td class="todo" style="width: 100%;"></td>
+                                                    </tr>
+                                                </table>
+                                                <p class="percent"></p>
+                                            </td>
+                                            <td class="subject">
+                                                <a href="issues/8859">Проверка 1002</a>
+                                            </td>
+                                            <td class="tracker">Служебная записка</td>
+                                            <td class="status">Обратная связь</td>
+                                            <td class="priority">Нормальный</td>
+                                            <td class="assigned_to">
+                                                <a href="users/5" class="user active">Бахарев Виктор</a>
+                                            </td>
+                                            <td class="updated_on">28.11.2017 13:31</td>
+                                            <td class="author">
+                                                <a href="users/41" class="user active">Решина Анастасия</a>
+                                            </td>
+                                            <td class="due_date">
+                                                <span class="overdue1">2017-11-02</span>
+                                            </td>
+                                        </tr>
+                                        <tr id="issue-8333" class="hascontextmenu even issue tracker-6 status-2 priority-2 priority-default overdue assigned-to-me ">
+                                            <td class="checkbox hide-when-print">
+                                                <input name="ids[]" type="checkbox" value="8333" />
+                                            </td>
+                                            <td class="id">
+                                                <a href="issues/8333">8333</a>
+                                            </td>
+                                            <td class="project">
+                                                <a href="projects/lw">Поручения и распоряжения Генерального Директора</a>
+                                            </td>
+                                            <td class="done_ratio">
+                                                <table class="progress progress-50" style="width: 80px;">
+                                                    <tr>
+                                                        <td class="closed" style="width: 50%;"></td>
+                                                        <td class="todo" style="width: 50%;"></td>
+                                                    </tr>
+                                                </table>
+                                                <p class="percent"></p>
+                                            </td>
+                                            <td class="subject">
+                                                <a href="issues/8333">Проверка 969</a>
+                                            </td>
+                                            <td class="tracker">Служебная записка</td>
+                                            <td class="status">В работе</td>
+                                            <td class="priority">Нормальный</td>
+                                            <td class="assigned_to">
+                                                <a href="users/5" class="user active">Бахарев Виктор</a>
+                                            </td>
+                                            <td class="updated_on">15.11.2017 13:32</td>
+                                            <td class="author">
+                                                <a href="users/41" class="user active">Решина Анастасия</a>
+                                            </td>
+                                            <td class="due_date">
+                                                <span class="overdue1">2017-10-30</span>
+                                            </td>
+                                        </tr>
+                                        <tr id="issue-6054" class="hascontextmenu odd issue tracker-4 status-2 priority-2 priority-default assigned-to-me ">
+                                            <td class="checkbox hide-when-print">
+                                                <input name="ids[]" type="checkbox" value="6054" />
+                                            </td>
+                                            <td class="id">
+                                                <a href="issues/6054">6054</a>
+                                            </td>
+                                            <td class="project">
+                                                <a href="projects/lw">Поручения и распоряжения Генерального Директора</a>
+                                            </td>
+                                            <td class="done_ratio">
+                                                <table class="progress progress-0" style="width: 80px;">
+                                                    <tr>
+                                                        <td class="todo" style="width: 100%;"></td>
+                                                    </tr>
+                                                </table>
+                                                <p class="percent"></p>
+                                            </td>
+                                            <td class="subject">
+                                                <a href="issues/6054">ГИС ГМП Исполнение п.1.1 протокола еженедельного совещания</a>
+                                            </td>
+                                            <td class="tracker">Входящие</td>
+                                            <td class="status">В работе</td>
+                                            <td class="priority">Нормальный</td>
+                                            <td class="assigned_to">
+                                                <a href="users/5" class="user active">Бахарев Виктор</a>
+                                            </td>
+                                            <td class="updated_on">22.09.2017 11:22</td>
+                                            <td class="author">
+                                                <a href="users/41" class="user active">Решина Анастасия</a>
+                                            </td>
+                                            <td class="due_date"></td>
+                                        </tr>
+                                        <tr id="issue-239" class="hascontextmenu even issue tracker-1 status-2 priority-2 priority-default overdue assigned-to-me ">
+                                            <td class="checkbox hide-when-print">
+                                                <input name="ids[]" type="checkbox" value="239" />
+                                            </td>
+                                            <td class="id">
+                                                <a href="issues/239">239</a>
+                                            </td>
+                                            <td class="project">
+                                                <a href="projects/lw">Поручения и распоряжения Генерального Директора</a>
+                                            </td>
+                                            <td class="done_ratio">
+                                                <table class="progress progress-0" style="width: 80px;">
+                                                    <tr>
+                                                        <td class="todo" style="width: 100%;"></td>
+                                                    </tr>
+                                                </table>
+                                                <p class="percent"></p>
+                                            </td>
+                                            <td class="subject">
+                                                <a href="issues/239">Обеспечить подключение к ГИС ГМП</a>
+                                            </td>
+                                            <td class="tracker">Ошибка</td>
+                                            <td class="status">В работе</td>
+                                            <td class="priority">Нормальный</td>
+                                            <td class="assigned_to">
+                                                <a href="users/5" class="user active">Бахарев Виктор</a>
+                                            </td>
+                                            <td class="updated_on">22.09.2017 11:22</td>
+                                            <td class="author">
+                                                <a href="users/41" class="user active">Решина Анастасия</a>
+                                            </td>
+                                            <td class="due_date">
+                                                <span class="overdue1">2017-09-10</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+        </div>
+        </section>
+        <!-- END CONTENT -->
+
+        <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+        <!-- START RIGHT SIDEBAR NAV-->
+        <aside id="right-sidebar-nav">
+        </aside>
+        <!-- LEFT RIGHT SIDEBAR NAV-->
+
+    </div>
+    <!-- END WRAPPER -->
+    </div>
+    <!-- END MAIN -->
+
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+    <!-- START FOOTER -->
+    <footer class="page-footer gradient-45deg-purple-deep-orange">
+    </footer>
+    <!-- END FOOTER -->
+</body>
+
+</html>
